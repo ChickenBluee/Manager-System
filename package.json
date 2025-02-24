@@ -1,0 +1,19 @@
+{
+  "name": "manager-system",
+  "version": "1.0.0",
+  "description": "Data management system",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . 2>null",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0"
+  },
+  "dependencies": {
+    "@electron/fuses": "^1.8.0"
+  }
+}
