@@ -1,0 +1,40 @@
+/* 
+   Sử dụng <video> làm background.
+   Cố định nó ở một vị trí duy nhất và chiến toàn bộn cửa sổ.
+   Thẻ này sẽ nằm ở lớp cuối cùng của bố cục
+*/
+.background {
+   position: fixed; /* Cố định vị trí trên cửa sổ */
+   top: 0; /* vị trí bắt đầu | Trên cùng cửa sổ */
+   left: 0; /* vị trí bắt đầu | Bên trái cửa sổ */
+   width: 100%; /* Chiều rộng */
+   height: 100%; /* Chiều cao */
+   object-fit: cover; /* Căn chỉnh hình ảnh phù hợp với kích thước */
+   z-index: -1; /* Thức tự hiển thị */
+}
+
+/* 
+   Title-bar của hệ thống dã được ẩn đi và đây là biện pháp thay thế.
+   Chiều dài của Title-bar 100% và chiều cao là 29px (trùng khớp với chiều cao tiêu chuẩn của Title-bar windows)
+   Cho phép người dùng di chuyển cửa sổ thông qua Title-bar này
+*/
+header {
+   width: 100%; /* Chiều rộng */
+   height: 29px; /* Chiều cao */
+   -webkit-app-region: drag; /* Cho phép di chuyển cửa sổ */
+   z-index: 1; /* Thức tự hiển thị */
+}
+
+/* 
+   Chiếm tất cả không gian còn lại, đây là nơi chưa nội dung chính.
+   chiều cao sẽ bằng 100% - 29px (chiều cao của header).
+   Căn giữa tất cả các item trong main
+*/
+main {
+   width: 100%; /* Chiều rộng */
+   height: calc(100% - 29px); /* Chiều cao */
+   z-index: 1; /* Thức tự hiển thị */
+   display: grid; /* Kích hoạt Grid */
+   place-items: center; /* Căn giữa nội dung */
+}
+

@@ -1,0 +1,91 @@
+/* 
+   Định nghĩa khoản cách mặc định là 0
+   Kích thước của phẩn từ được tính là tổng của (width,height) + padding + border
+*/
+* {
+   caret-color: transparent; /* Ẩn con trỏ văn bản */
+   margin: 0; /* Khoản cách nội dung bên trong vật thể */
+   padding: 0; /* Khoản cách bên ngoài vật thể */
+   box-sizing: border-box; /* Tính kích thước của đối tượng bao gồm margin,padding,border */
+}
+
+/* 
+   Định nghĩa cho html,body là 100% cho chiều cao và rộng
+   Chiềm toàn bộ cửa sổ
+*/
+html, body {
+   width: 100%; /* Chiều rộng */
+   height: 100%; /* Chiều cao */
+}
+
+/* 
+   Không cho phép người dùng chọn văn bản
+*/
+.no-select {
+   user-select: none; /* Chặn chọn văn bản */
+   -webkit-user-select: none; /* Safari */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* IE/Edge */
+}
+
+/* 
+   Vô hiệu hóa tất cả các sự kiện khi áp dụng
+*/
+.disable-event {
+   pointer-events: none; /* Vô hiêu hóa sự kiện */
+}
+
+/* 
+   Định nghĩa chiều cao và chiều rộng tối đa là 100% [Giá trị không thể ghi đè]
+*/
+.size-maximum {
+   max-width: 100% !important; /*Chiều rộng tối đa */
+   max-height: 100% !important; /* Chiều cao tối đa */
+}
+
+/* 
+   Định nghĩa kích thước,font cho chũ
+*/
+.font-text {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; /* Định dạnh font chữ */
+   font-size: 24px; /* Kích thước chữ */
+}
+
+/* 
+   Định nghĩa màu sắt cho chữ của vật thể
+*/
+.color-text {
+   color: white !important; /* Màu chữ */
+}
+
+/* 
+   Định nghĩa màu nền của button và loại bỏ viền
+*/
+.color-button {
+   background-color: #9E3FFD;
+   border:none !important;
+   box-shadow: none;
+}
+
+/* 
+   Định nghĩa màu sắt cho viền của vật thể
+*/
+.color-border {
+   border-color: white !important; /* Màu viền */
+}
+
+/* 
+   Tạo một lớp background mờ vên vật thể được áp dụng
+*/
+.blur-background {
+   background-color: rgba(255, 255, 255, 0.3); /* Điều chỉnh màu */
+   backdrop-filter: blur(10px); /* Làm mờ */
+   -webkit-backdrop-filter: blur(10px); /* Hỗ trợ WebKit */
+}
+
+/* 
+   Tạo Hiệu ứng đổ bóng cho các vật thể được áp dụng 
+*/
+.shadow-background {
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho vật thể */
+}

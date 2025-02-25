@@ -1,5 +1,4 @@
 const { app, BrowserWindow } = require('electron/main')
-app.commandLine.appendSwitch('disable-gpu');
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -20,7 +19,7 @@ const createWindow = () => {
       allowRunningInsecureContent: true, 
     }
   })
-  win.loadFile('src/html/index.html')
+  win.loadFile('src/html/login.html')
 }
 
 app.whenReady().then(() => {
